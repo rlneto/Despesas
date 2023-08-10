@@ -1,4 +1,5 @@
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 class Despesa {
 	constructor(id, title, amount, date) {
@@ -23,6 +24,7 @@ function App() {
 	);
 	return (
 		<div>
+			<NewExpense />
 			<Expenses expenses={expenses} />
 		</div>
 	);
