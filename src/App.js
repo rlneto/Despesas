@@ -9,7 +9,6 @@ class Despesa {
 		this.date = date;
 	}
 }
-
 function App() {
 	const expenses = [];
 	expenses.push(
@@ -22,9 +21,14 @@ function App() {
 	expenses.push(
 		new Despesa("e4", "Mesa Escritório", 599.99, new Date(2021, 5, 12))
 	);
+	const addExpenseHandler = (expense) => {
+		console.log("In App.js");
+		console.log(expense);
+	};
+
 	return (
 		<div>
-			<NewExpense />
+			<NewExpense onAddExpense={addExpenseHandler} />
 			<Expenses expenses={expenses} />
 		</div>
 	);
